@@ -155,6 +155,7 @@ a:hover {
 }
 .filter-item:hover .slider-popup {
   opacity: 1;
+  color: orange;
 }
 
 .slider-popup {
