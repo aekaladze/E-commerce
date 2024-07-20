@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.carousel {
+  width: 100%;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -45,6 +49,7 @@ a:hover {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.16s;
 }
 .btn:hover {
   opacity: 0.7;
@@ -53,6 +58,7 @@ a:hover {
 .nav_list {
   display: flex;
   flex-direction: row;
+  gap: 30px;
 }
 
 /*Product Card*/
@@ -102,6 +108,7 @@ a:hover {
 
 .button_divs {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 
@@ -125,27 +132,34 @@ a:hover {
 
 /*.........Aside.........*/
 .filter {
-  width: 200px;
-  padding: 20px;
+  width: 250px;
+  padding: 30px;
   background-color: #f4f4f4;
   border-right: 10x solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .filter-ul {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
 }
-.filter-item .icon {
-  margin-right: 10px;
-}
-.filter-item:hover {
-  color: orange;
+.filter-item {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
 }
 .filter-item:hover .slider-popup {
-  display: flex;
+  opacity: 1;
 }
 
 .slider-popup {
-  display: none;
+  display: flex;
+  opacity: 0;
   position: absolute;
   left: 210px;
   top: 0;
@@ -154,7 +168,7 @@ a:hover {
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 0 10px #rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   z-index: 1000;
 }
